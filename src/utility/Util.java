@@ -8,22 +8,18 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.UnsupportedEncodingException;
 
-//import sun.misc.BASE64Decoder;
-//import sun.misc.BASE64Encoder;
-
 
 public class Util
 {
 
-	
 	/*************************************************************************************
-	 * 설명 	 : Serialized interface 를 구현한 객체의 직렬화된 byte 배열을 구한다.
-	 * 작성자 : flytaek
-	 * 작성일 : 2006. 12. 13
+	 * Serialized interface 를 구현한 객체의 직렬화된 byte 배열을 구한다.
+	 * @작성자 : ohintaek
+	 * @작성일 : 2006. 12. 13
 	 * @param _oObject	: Serialized interface 를 구현한 객체
 	 * @return : byte 배열
 	 * @throws Exception 
-	 * 수정이력
+	 * @수정이력
 	 *  1. ...
 	 */
 	public static byte[] ObjectToByte(Object _oObject) throws Exception
