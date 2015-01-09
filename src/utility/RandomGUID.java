@@ -4,7 +4,7 @@
  *@LastModifyDate : 2007. 1. 24
  *@LastModifier : flytaek
  *@LastVersion : 1.0
- *    2007. 1. 24    flytaek    1.0    ÃÖÃÊ»ı¼º 
+ *    2007. 1. 24    flytaek    1.0    ìµœì´ˆìƒì„± 
  =========================================================*/
 package utility;
 
@@ -18,7 +18,7 @@ import java.security.*;
 
 
 /**
- * ¼³¸í	 : GUID(Global Unique ID) ¸¦ ±¸ÇÏ´Â À¯Æ¿¸®Æ¼
+ * ì„¤ëª…	 : GUID(Global Unique ID) ë¥¼ êµ¬í•˜ëŠ” ìœ í‹¸ë¦¬í‹°
  * 
  *  In the multitude of java GUID generators, I found none that
  * guaranteed randomness.  GUIDs are guaranteed to be globally unique
@@ -83,8 +83,8 @@ import java.security.*;
  * generating random GUIDs be open for inspection and modification.
  * This class is free for all uses.
  * 
- * ÀÛ¼ºÀÚ : flytaek
- * ÀÛ¼ºÀÏ : 2007. 1. 24
+ * ì‘ì„±ì : flytaek
+ * ì‘ì„±ì¼ : 2007. 1. 24
  *
  */
 public class RandomGUID {
@@ -122,14 +122,14 @@ public class RandomGUID {
     }
 
     /*************************************************************************************
-     * ¼³¸í 	 : Method to generate the random GUID
-     * ÀÛ¼ºÀÚ : flytaek
-     * ÀÛ¼ºÀÏ : 2007. 1. 24
+     * ì„¤ëª… 	 : Method to generate the random GUID
+     * ì‘ì„±ì : flytaek
+     * ì‘ì„±ì¼ : 2007. 1. 24
      * @param _bSecure : Setting secure true
      * 					enables each random number generated to be cryptographically
      * 					strong.  Secure false defaults to the standard Random function seeded
      * 					with a single cryptographically strong random number.
-     * ¼öÁ¤ÀÌ·Â
+     * ìˆ˜ì •ì´ë ¥
      *  1. ...
      * @throws Exception 
      */
@@ -187,7 +187,7 @@ public class RandomGUID {
         } 
         catch (Exception e) 
         {
-        	// ¹Ğ¸®¼¼ÄÁµå °ªÀ» ±¸ÇØÁØ´Ù.
+        	// ë°€ë¦¬ì„¸ì»¨ë“œ ê°’ì„ êµ¬í•´ì¤€ë‹¤.
     		DateFormat format = new SimpleDateFormat("yyyyMMddHHmmsss");
     		return format.format(new Date(Calendar.getInstance().getTimeInMillis()));     	
         }

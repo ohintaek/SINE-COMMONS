@@ -4,7 +4,7 @@
  *@LastModifyDate : 2008. 08. 20
  *@LastModifier : flytaek
  *@LastVersion : 1.0
- *    2008. 08. 20    flytaek    1.0    ÃÖÃÊ»ı¼º 
+ *    2008. 08. 20    flytaek    1.0    ìµœì´ˆìƒì„± 
  =========================================================*/
 package utility;
 
@@ -13,7 +13,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * ÀÏÀÚ/½Ã°£ Á¤º¸ °ü·Ã À¯Æ¿¸®Æ¼
+ * ì¼ì/ì‹œê°„ ì •ë³´ ê´€ë ¨ ìœ í‹¸ë¦¬í‹°
  * <BR>
  * <p>Copyright 2006-2007 the original author or authors.</p>
  *
@@ -23,13 +23,13 @@ import java.util.Date;
 public class DateUtil
 {
     /*************************************************************************************
-     * Date¸¦ ÆĞÅÏÇü½Ä¿¡ ¸Âµµ·Ï ¹®ÀÚ¿­·Î º¯È¯ÇØ ÁØ´Ù.
-     * @ÀÛ¼ºÀÚ : flytaek
-     * @ÀÛ¼ºÀÏ : 2008. 07. 15
+     * Dateë¥¼ íŒ¨í„´í˜•ì‹ì— ë§ë„ë¡ ë¬¸ìì—´ë¡œ ë³€í™˜í•´ ì¤€ë‹¤.
+     * @ì‘ì„±ì : flytaek
+     * @ì‘ì„±ì¼ : 2008. 07. 15
      * @param date		: Date
-     * @param pattern	: ÆĞÅÏÇü½Ä(ex, yyyy-MM-dd HH:mm:ss)
+     * @param pattern	: íŒ¨í„´í˜•ì‹(ex, yyyy-MM-dd HH:mm:ss)
      * @return 
-     * @¼öÁ¤ÀÌ·Â
+     * @ìˆ˜ì •ì´ë ¥
      *  1. ...
      */
     public static String getFormatedDate(Date date, String pattern) 
@@ -38,12 +38,12 @@ public class DateUtil
     }
     
     /*************************************************************************************
-     * ÇöÀç½Ã°£À» ÆĞÅÏÇü½Ä¿¡ ¸Âµµ·Ï ¹®ÀÚ¿­·Î º¯È¯ÇØ ÁØ´Ù.
-     * @ÀÛ¼ºÀÚ : flytaek
-     * @ÀÛ¼ºÀÏ : 2009. 02. 04
+     * í˜„ì¬ì‹œê°„ì„ íŒ¨í„´í˜•ì‹ì— ë§ë„ë¡ ë¬¸ìì—´ë¡œ ë³€í™˜í•´ ì¤€ë‹¤.
+     * @ì‘ì„±ì : flytaek
+     * @ì‘ì„±ì¼ : 2009. 02. 04
      * @param pattern
      * @return 
-     * @¼öÁ¤ÀÌ·Â
+     * @ìˆ˜ì •ì´ë ¥
      *  1. ...
      */
     public static String getFormatedCurrentDate(String pattern) 
@@ -52,12 +52,12 @@ public class DateUtil
     }    
     
     /*************************************************************************************
-     * ³¯ÀÚ°ª¹®ÀÚ¿­À» Date°´Ã¼·Î º¯È¯ÇÑ´Ù.
-     * @ÀÛ¼ºÀÚ : flytaek
-     * @ÀÛ¼ºÀÏ : 2009. 05. 26
+     * ë‚ ìê°’ë¬¸ìì—´ì„ Dateê°ì²´ë¡œ ë³€í™˜í•œë‹¤.
+     * @ì‘ì„±ì : flytaek
+     * @ì‘ì„±ì¼ : 2009. 05. 26
      * @param dateValue : '20090301', '2009030112', '200903011201', '20090301120130'
-     * @return : º¯È¯µÈ Date °´Ã¼
-     * @¼öÁ¤ÀÌ·Â
+     * @return : ë³€í™˜ëœ Date ê°ì²´
+     * @ìˆ˜ì •ì´ë ¥
      *  1. ...
      */
     public static Date getDate(String dateValue)
@@ -71,18 +71,18 @@ public class DateUtil
 		int iSS = (dateValue.length() >= 14) ? Integer.parseInt(dateValue.substring(12,14)) : 0;
 
 		Calendar cal = Calendar.getInstance();
-		cal.set(iYYYY, iMM - 1/*JDK ½ºÆå»ó 1À»  »©Áà¾ß ÇÑ´Ù.*/, iDD, iHH, iMI, iSS);
+		cal.set(iYYYY, iMM - 1/*JDK ìŠ¤í™ìƒ 1ì„  ë¹¼ì¤˜ì•¼ í•œë‹¤.*/, iDD, iHH, iMI, iSS);
 		return cal.getTime();
     }
     
     /*************************************************************************************
-     * ÁÙ·çÅ¸ÀÓ °ªÀ» Date °ªÀ¸·Î º¯È¯ÇÑ´Ù.
-     * @ÀÛ¼ºÀÚ : flytaek
-     * @ÀÛ¼ºÀÏ : 2009. 08. 21
+     * ì¤„ë£¨íƒ€ì„ ê°’ì„ Date ê°’ìœ¼ë¡œ ë³€í™˜í•œë‹¤.
+     * @ì‘ì„±ì : flytaek
+     * @ì‘ì„±ì¼ : 2009. 08. 21
      * @param zTime : '210556ZAUG2009'
-     * @return : º¯È¯µÈ Date °´Ã¼
+     * @return : ë³€í™˜ëœ Date ê°ì²´
      * @throws Exception 
-     * @¼öÁ¤ÀÌ·Â
+     * @ìˆ˜ì •ì´ë ¥
      *  1. ...
      */
     public static Date convertZTimeToDate(String zTime) throws Exception
@@ -118,7 +118,7 @@ public class DateUtil
 		else if(month.equalsIgnoreCase("DEC"))
 			iMM = 12;
 		else
-			throw new Exception(month + " ¾Ë¼ö ¾ø´Â ½Äº°ÀÚÀÔ´Ï´Ù.");
+			throw new Exception(month + " ì•Œìˆ˜ ì—†ëŠ” ì‹ë³„ìì…ë‹ˆë‹¤.");
 		
 		int iDD = Integer.parseInt(zTime.substring(0,2));
 
@@ -127,7 +127,7 @@ public class DateUtil
 		int iSS = 0;
 
 		Calendar cal = Calendar.getInstance();
-		cal.set(iYYYY, iMM - 1/*JDK ½ºÆå»ó 1À»  »©Áà¾ß ÇÑ´Ù.*/, iDD, iHH, iMI, iSS);
+		cal.set(iYYYY, iMM - 1/*JDK ìŠ¤í™ìƒ 1ì„  ë¹¼ì¤˜ì•¼ í•œë‹¤.*/, iDD, iHH, iMI, iSS);
 		return cal.getTime();
     }
 
