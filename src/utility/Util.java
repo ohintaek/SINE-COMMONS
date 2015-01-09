@@ -13,13 +13,13 @@ public class Util
 {
 
 	/*************************************************************************************
-	 * Serialized interface ¸¦ ±¸ÇöÇÑ °´Ã¼ÀÇ Á÷·ÄÈ­µÈ byte ¹è¿­À» ±¸ÇÑ´Ù.
-	 * @ÀÛ¼ºÀÚ : ohintaek
-	 * @ÀÛ¼ºÀÏ : 2006. 12. 13
-	 * @param _oObject	: Serialized interface ¸¦ ±¸ÇöÇÑ °´Ã¼
-	 * @return : byte ¹è¿­
+	 * Serialized interface ë¥¼ êµ¬í˜„í•œ ê°ì²´ì˜ ì§ë ¬í™”ëœ byte ë°°ì—´ì„ êµ¬í•œë‹¤.
+	 * @ì‘ì„±ì : ohintaek
+	 * @ì‘ì„±ì¼ : 2006. 12. 13
+	 * @param _oObject	: Serialized interface ë¥¼ êµ¬í˜„í•œ ê°ì²´
+	 * @return : byte ë°°ì—´
 	 * @throws Exception 
-	 * @¼öÁ¤ÀÌ·Â
+	 * @ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static byte[] ObjectToByte(Object _oObject) throws Exception
@@ -28,25 +28,25 @@ public class Util
 		ObjectOutputStream oosMsg = null;
 		try
 		{		
-			// 1. _oRSVDPktÀÇ BodyºÎºĞÀ»  byte ¹è¿­·Î º¯È¯ÇÑ´Ù.
+			// 1. _oRSVDPktì˜ Bodyë¶€ë¶„ì„  byte ë°°ì—´ë¡œ ë³€í™˜í•œë‹¤.
             baosMsg = new ByteArrayOutputStream();
             oosMsg = new ObjectOutputStream(baosMsg);
             oosMsg.writeObject(_oObject);
             oosMsg.flush();
             baosMsg.flush();
             
-            // 2. º¯È¯µÈ byte ¹è¿­À» ¸®ÅÏÇÑ´Ù.
+            // 2. ë³€í™˜ëœ byte ë°°ì—´ì„ ë¦¬í„´í•œë‹¤.
             return baosMsg.toByteArray();
 		}
 		catch(Exception e)
 		{
-			throw new Exception("Message ¸¶¼£¸µ ½ÇÆĞ", e);
+			throw new Exception("Message ë§ˆìƒ¬ë§ ì‹¤íŒ¨", e);
 		}
 		finally
 		{
 			try
 			{
-				// ½ºÆ®¸²À» ´İ´Â´Ù.
+				// ìŠ¤íŠ¸ë¦¼ì„ ë‹«ëŠ”ë‹¤.
 				if(oosMsg != null)
 				{
 					oosMsg.close();
@@ -68,14 +68,14 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * ¼³¸í 	 :
-	 * ÀÛ¼ºÀÚ : lee mira
-	 * ÀÛ¼ºÀÏ : 2007. 
+	 * ì„¤ëª… 	 :
+	 * ì‘ì„±ì : lee mira
+	 * ì‘ì„±ì¼ : 2007. 
 	 * @param _bData
 	 * @return
 	 * @throws IOException
 	 * @throws ClassNotFoundException 
-	 * ¼öÁ¤ÀÌ·Â
+	 * ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static Object ByteToObject( byte[] _bData ) throws IOException, ClassNotFoundException
@@ -121,12 +121,12 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * ¼³¸í 	 :
-	 * ÀÛ¼ºÀÚ : lee mira
-	 * ÀÛ¼ºÀÏ : 2007. 
+	 * ì„¤ëª… 	 :
+	 * ì‘ì„±ì : lee mira
+	 * ì‘ì„±ì¼ : 2007. 
 	 * @param str
 	 * @return 
-	 * ¼öÁ¤ÀÌ·Â
+	 * ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 * @throws UnsupportedEncodingException 
 	 */
@@ -145,12 +145,12 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * ¼³¸í 	 : 
-	 * ÀÛ¼ºÀÚ : lee mira
-	 * ÀÛ¼ºÀÏ : 2007. 
+	 * ì„¤ëª… 	 : 
+	 * ì‘ì„±ì : lee mira
+	 * ì‘ì„±ì¼ : 2007. 
 	 * @param str
 	 * @return 
-	 * ¼öÁ¤ÀÌ·Â
+	 * ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 * @throws UnsupportedEncodingException 
 	 */
@@ -171,12 +171,12 @@ public class Util
 	
 	
 	/*************************************************************************************
-	 * Å¬·¡½ºÀÇ ÂªÀº ÀÌ¸§À» ±¸ÇÑ´Ù.
-	 * @ÀÛ¼ºÀÚ : flytaek
-	 * @ÀÛ¼ºÀÏ : 2007. 07. 04
+	 * í´ë˜ìŠ¤ì˜ ì§§ì€ ì´ë¦„ì„ êµ¬í•œë‹¤.
+	 * @ì‘ì„±ì : flytaek
+	 * @ì‘ì„±ì¼ : 2007. 07. 04
 	 * @param cls : Class
 	 * @return 
-	 * @¼öÁ¤ÀÌ·Â
+	 * @ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static String getClassShortName(@SuppressWarnings("rawtypes") Class cls)
@@ -185,13 +185,13 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * °³Çà¹®ÀÚ¸¦ ±¸ÇÑ´Ù.
-	 * @ÀÛ¼ºÀÚ : flytaek
-	 * @ÀÛ¼ºÀÏ : 2007. 07. 25
+	 * ê°œí–‰ë¬¸ìë¥¼ êµ¬í•œë‹¤.
+	 * @ì‘ì„±ì : flytaek
+	 * @ì‘ì„±ì¼ : 2007. 07. 25
 	 * @return 
-	 * 	1. UNIX °è¿­ : \n
-	 *  2. MS °è¿­ : \r\n
-	 * @¼öÁ¤ÀÌ·Â
+	 * 	1. UNIX ê³„ì—´ : \n
+	 *  2. MS ê³„ì—´ : \r\n
+	 * @ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static String getLineSeparator()
@@ -200,13 +200,13 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * Exception°´Ã¼ÀÇ ¼­ºê¿À·ù¸Ş½ÃÁö¸¦ ¸ğµÎ ÇÕÇØ¼­ ±¸ÇÑ´Ù.
-	 * 	1. ¿©·¯Á¾·ùÀÇ ExceptionÀÌ ÁßÃ¸µÇ¾îÀÖÀ»°æ¿ì ¿À·ù¸Ş½ÃÁö³»¿ëÀÌ ÁßÃ¸µÇÁö ¾Êµµ·Ï Ã³¸® ÇÏ¿´À½  
-	 * @ÀÛ¼ºÀÚ : flytaek
-	 * @ÀÛ¼ºÀÏ : 2009. 02. 09
+	 * Exceptionê°ì²´ì˜ ì„œë¸Œì˜¤ë¥˜ë©”ì‹œì§€ë¥¼ ëª¨ë‘ í•©í•´ì„œ êµ¬í•œë‹¤.
+	 * 	1. ì—¬ëŸ¬ì¢…ë¥˜ì˜ Exceptionì´ ì¤‘ì²©ë˜ì–´ìˆì„ê²½ìš° ì˜¤ë¥˜ë©”ì‹œì§€ë‚´ìš©ì´ ì¤‘ì²©ë˜ì§€ ì•Šë„ë¡ ì²˜ë¦¬ í•˜ì˜€ìŒ  
+	 * @ì‘ì„±ì : flytaek
+	 * @ì‘ì„±ì¼ : 2009. 02. 09
 	 * @param t
 	 * @return 
-	 * @¼öÁ¤ÀÌ·Â
+	 * @ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static String getExceptionMessage(Exception t)
@@ -219,7 +219,7 @@ public class Util
 		Throwable st = t.getCause();
 		String stMsg = null;
 		int iDepth = 0;
-		while((st != null) && (iDepth < 10/*Exception À» 10°³ ÀÌÇÏ·Î¸¸ È®ÀÎÇÑ´Ù.*/))
+		while((st != null) && (iDepth < 10/*Exception ì„ 10ê°œ ì´í•˜ë¡œë§Œ í™•ì¸í•œë‹¤.*/))
 		{
 			stMsg = st.getMessage();
 			if(errMsg == null)
@@ -238,12 +238,12 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * ¹ÙÀÌÆ®¹è¿­À» int ÇüÀ¸·Î º¯È¯ÇÑ´Ù.
-	 * @ÀÛ¼ºÀÚ : flytaek
-	 * @ÀÛ¼ºÀÏ : 2009. 09. 21
-	 * @param b : ¹ÙÀÌÆ®¹è¿­
-	 * @return : int °ª
-	 * @¼öÁ¤ÀÌ·Â
+	 * ë°”ì´íŠ¸ë°°ì—´ì„ int í˜•ìœ¼ë¡œ ë³€í™˜í•œë‹¤.
+	 * @ì‘ì„±ì : flytaek
+	 * @ì‘ì„±ì¼ : 2009. 09. 21
+	 * @param b : ë°”ì´íŠ¸ë°°ì—´
+	 * @return : int ê°’
+	 * @ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static int byteArrayToInt(byte[] b)
@@ -255,12 +255,12 @@ public class Util
 	}
 	
 	/*************************************************************************************
-	 * int Çü°ªÀ» ¹ÙÀÌÆ®¹è¿­·Î º¯È­ÇÑ´Ù.
-	 * @ÀÛ¼ºÀÚ : flytaek
-	 * @ÀÛ¼ºÀÏ : 2009. 09. 21
-	 * @param value : int °ª
-	 * @return : ¹ÙÀÌÆ®¹è¿­
-	 * @¼öÁ¤ÀÌ·Â
+	 * int í˜•ê°’ì„ ë°”ì´íŠ¸ë°°ì—´ë¡œ ë³€í™”í•œë‹¤.
+	 * @ì‘ì„±ì : flytaek
+	 * @ì‘ì„±ì¼ : 2009. 09. 21
+	 * @param value : int ê°’
+	 * @return : ë°”ì´íŠ¸ë°°ì—´
+	 * @ìˆ˜ì •ì´ë ¥
 	 *  1. ...
 	 */
 	public static byte [] intToByteArray(int value)
